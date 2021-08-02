@@ -27,15 +27,6 @@ class Board extends React.Component {
     });
   }
 
-  renderSquare(i) {
-    return (
-      <Square 
-        value={this.state.squares[i]}
-        onClick={() => this.handleClick(i)}
-      />
-    );
-  }
-
   calculateNumber() {
     const hexString = parseInt(this.state.squares.join(""), 2).toString(16).padStart(16, 0);
     this.setState({
